@@ -1,0 +1,455 @@
+/* Estrutura dp site 
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #fff url(../imagens/fundo.png) repeat-x;
+}
+
+#container {
+	width: 880px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+#topo {
+	background: url(../imagens/logounioeste2.png) no-repeat left center;
+	height: 100px;
+	padding-top: 30px;
+
+}
+
+.title h1{
+	float: right;
+	color: #fff;
+	font-size: 1.2em;
+}
+
+/*Barra NIVEL 1*/
+#topo nav ul li ul{
+	display: none;
+	position: relative;
+	max-width: 110px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background: #b10333; 
+	
+}
+
+#topo nav ul li:hover ul{
+	display: block;
+}
+
+#topo nav ul li ul a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background: url(../imagens/divisor.png) no-repeat left center;
+}
+
+/* NIVEL 2 */
+
+#topo nav ul ul ul {
+	margin-left: 110px;
+	top: 0;
+	position: relative;
+	display: block;
+}
+
+
+#topo nav ul ul ul ul a {
+	display: block;
+}
+
+/*Nivel 2
+
+menu li:hover > ul.submenu-2{ 
+display:block; 
+top:0; 
+left:195px; 
+padding:5px; 
+width:200px;  
+border-radius: 0 5px 5px 5px; 
+}
+.menu ul.submenu-2 a{  
+width:160px; 
+padding:0 
+20px; 
+border-radius:5px; }
+ 
+
+.sub li:hover > ul.sub2 {
+	display: block;
+	position: static;
+	left: 100%;
+	max-width: 110px;
+}
+
+.sub ul.sub2 a {
+	text-decoration: none;
+	position: static;
+	color: #fff;
+	display: block;
+}
+ 
+ .fa fa-chevron-right {
+ 	margin-left: 20px;
+ 	font-size: 15px;
+ }*/
+
+/* Barra de navegação
+*/
+
+a:link, a:visited {
+	padding: 2px;
+	color: #b10333;
+}
+
+a:hover {
+color: #e50040;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#topo ul{
+	margin-top: 30px;
+	background: #b10333;
+	float: left;
+}
+
+#topo ul li{
+	float: left;
+}
+
+#topo ul a {
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 1.5em;
+	line-height: 2.1em;
+	text-decoration: none;
+	color: #fff;
+	background: url(../imagens/divisor.png) no-repeat left center;
+}
+
+#topo ul .primeiro a{
+	background: none;	
+}
+
+#topo ul a:hover{
+	color: #69001d;
+}
+
+body.home #navegacao a#home,
+body.apresentacao #navegacao a#apresentacao,
+body.equipe #navegacao a#equipe,
+body.atuacao #navegacao a#atuacao,
+body.atividades #navegacao a#atividades,
+body.publicacoes #navegacao a#publicacoes,
+body.noticias #navegacao a#noticias,
+body.contatos #navegacao a#contatos,
+body.pesquisa #navegacao a#pesquisa,
+body.extensao #navegacao a#extensao,
+body.pesquisa #navegacao a#pesquisa,
+body.orientacoes #navegacao a#orientacoes,
+body.pesquisa1 #navegacao a#pesquisa1,
+body.orientacoes1 #navegacao a#orientacoes1{
+	color: #fff;
+	background: #de003e;
+	cursor: text;
+}
+
+
+/* Barra NIVEL 1 usando JS
+
+#topo ul ul {
+	position: absolute;
+	min-width: 100px;
+	display: none;
+	background: #b10333; 
+	margin: 0;
+	padding: 0;
+}
+
+ul li ul li{
+	background: #b10333; 
+}
+.ul-noticias {
+	display: none;
+}
+
+#topo ul li:hover ul{
+	color: #69001d;
+}
+
+body.pesquisa #navegacao a#pesquisa,
+body.extensao #navegacao a#extensao{
+	color: #fff;
+	background: #de003e;
+	cursor: text;
+}*/
+
+
+/*Configura layout das três colunas*/
+
+#conteudo {
+	margin-top: 60px;
+	background: #f5f5f5;
+}
+
+#lateral {
+	width: 180px;
+	float: left;
+	margin: 0 0 20px -750px;
+}
+
+
+#lateral-teste {
+	width: 180px;
+	float: right;
+	margin: 0 0 20px -680px;
+}
+
+#uma-coluna-teste #primario {
+	width: 665px;
+	margin: 0 0 20px 0;
+}
+
+#primario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 195px;
+}
+
+
+#duas-colunas #primario {
+	width: 555px;
+}
+
+
+#uma-coluna #primario {
+	width: 750px;
+	margin: 0 0 20px 0;
+}
+
+#secundario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 15px;
+}
+
+/*Caixa*/
+.caixa {
+	margin: 10px 0; 
+	padding: 5px 0 5px 0;
+	background: #f3f3f3 url(../imagens/fundo-caixa.png);
+}
+
+h2 {
+	font-size: 1em;
+	background: #294c71;
+	color: #fff;
+	padding: 5px;
+}
+
+.caixa-conteudo {
+	background: #fff;
+	padding: 5px;
+	margin-top: 5px; 
+}
+
+/*Formatar menus laterais 
+*/
+#lateral ul a {
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #f3f3f3; 
+}
+
+#lateral ul a:hover{
+	padding-left: 20px;
+	background: #f9f9f9 url(../imagens/marcador.png) no-repeat left;
+	color: #a1a1a1;
+}
+
+/*Formatando formulários
+*/
+label {
+	display: block;
+	cursor: pointer;
+}
+
+input {
+	padding: 5px;
+	width: 125px;
+	font-size: 0.9em;
+	background-color: #fff;
+}
+
+input.submit {
+	width: 80px;
+	color: #fff;
+	background-color: #b10333;
+	border: 2px solid #870529;
+	padding: 5px;
+}
+
+/*Formatando imagens
+*/
+img {
+	border: 2px solid #dfdfdf;
+}
+
+img.imagem-principal {
+	width: 98%;
+	border: 3px solid #dfdfdf;
+}
+ img.detae {
+ 	width: 50%;
+ 	border: 4px solid #dfdfdf;
+ 	-webkit-border-radius: 170px 170px;
+	-moz-border-radius: 170px 170px;
+	border-radius: 170px 170px;
+	display: block;
+	margin-top: 20px;
+	margin-left: 160px;
+ }
+
+.lab img{
+ 	border: 3px solid #dfdfdf;
+ 	width: 64px;
+ 
+ }
+
+ ul.lab {
+ 	list-style: none;
+ 	display: inline-flex;
+ 	margin: 0px auto;
+ }
+.min{
+	width: 90px;
+	padding: 2px;
+}
+
+ .lbox {
+ 	visibility: hidden;
+ 	opacity: 1;
+ }
+
+.lbox:target{
+	opacity: 1;
+	visibility: visible;
+	width: 99%;
+	height: 100%;
+	top: 50px;
+	left: 180px;
+	background: rgba(255, 99, 71, 0);
+	position: fixed;
+}
+
+.box-img {
+	width: 200px;
+	margin: 0px auto;
+}
+
+.btn {
+	color: #fff;
+	font-family: "Arial";
+	text-decoration: none;
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	font-size: 40px;
+	text-align: center;
+}
+
+#prev{
+	left: -20%;
+	top: 45%
+}
+
+#next{
+	right: 4%;
+	top: 45%
+}
+
+#close {
+	top: 0;
+	right: 7.5%;
+}
+/*Formatando cabeçalhos*/
+
+h3 {
+	text-transform: uppercase;
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+}
+
+.destaque h3{
+	background: #b10333;
+	color: #fff;
+}
+
+.entrevista h3{
+	background: #de003e;
+}
+
+/*Formatando lista de noticias*/
+#lista-noticias li{
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	height: 65px;
+}
+
+#lista-noticias li a img{
+	float: left;
+	margin: 5px;
+}
+
+#lista-noticias li a {
+	text-decoration: none;
+}
+
+#lista-noticias li a h3{
+	font-size: 0.8em;
+	padding: 0;
+	color: #3e7ab9;
+}
+
+#lista-noticias li a p{
+	font-size: 0.7em;
+	color: #000;
+}
+
+#lista-noticias li:hover{
+	background: #eee;
+	cursor: pointer;
+}
+
+
+/*Rodape*/
+#container-rodape{
+	background: #294c71;
+	padding: 20px;
+}
+
+#rodape {
+	margin: 0 auto;
+	width: 750px;
+	color: #fff;
+}
+
