@@ -1,4 +1,4 @@
-/* Estrutura dp site 
+/* Estrutura do site 
 */
 
 * {
@@ -30,22 +30,7 @@ body {
 	font-size: 1.2em;
 }
 
-/*Barra NIVEL 1*/
-#topo nav ul li ul{
-	display: none;
-	position: relative;
-	max-width: 110px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	background: #b10333; 
-	
-}
-
-#topo nav ul li:hover ul{
-	display: block;
-}
-
+/* MENU NIVEL 1*/
 #topo nav ul li ul a {
 	display: block;
 	text-decoration: none;
@@ -53,58 +38,61 @@ body {
 	background: url(../imagens/divisor.png) no-repeat left center;
 }
 
-/* NIVEL 2 */
+/* MENU NIVEL 2 */
 
-#topo nav ul ul ul {
-	margin-left: 110px;
-	top: 0;
+.menu ul li{
+	background: #b10333;
+	color: white;
+	max-width: 130px;
+	height: 45px;
+	display: inline-block;
+	text-align: center;
+	font-size: 1em;
 	position: relative;
-	display: block;
+	padding: 0;
+	
 }
 
-
-#topo nav ul ul ul ul a {
-	display: block;
+.menu ul li:hover{
+	background-color: #b10333;
 }
 
-/*Nivel 2
-
-menu li:hover > ul.submenu-2{ 
-display:block; 
-top:0; 
-left:195px; 
-padding:5px; 
-width:200px;  
-border-radius: 0 5px 5px 5px; 
+.menu ul{
+	padding: 0px;
+	margin-right: 0;
+	margin-left: 0;
 }
-.menu ul.submenu-2 a{  
-width:160px; 
-padding:0 
-20px; 
-border-radius:5px; }
- 
 
-.sub li:hover > ul.sub2 {
+.menu ul ul{
+	display: none;
+}
+
+.menu ul li:hover > ul{
 	display: block;
-	position: static;
-	left: 100%;
 	max-width: 110px;
 }
 
-.sub ul.sub2 a {
-	text-decoration: none;
-	position: static;
-	color: #fff;
-	display: block;
+.menu ul ul ul{
+	max-width: 110px;
+	top: 0px;
+	margin-left: 110px;
+	position: absolute;
 }
- 
- .fa fa-chevron-right {
- 	margin-left: 20px;
- 	font-size: 15px;
- }*/
 
-/* Barra de navegação
-*/
+.menu ul ul li:hover{
+	background-color: #b10333;
+}
+
+.menu ul ul ul li:hover{
+	background-color: #b10333;
+}
+
+.menu a{
+	color: white;
+	text-decoration: none;
+}
+
+/* Barra de navegação */
 
 a:link, a:visited {
 	padding: 2px;
@@ -168,36 +156,27 @@ body.orientacoes1 #navegacao a#orientacoes1{
 	cursor: text;
 }
 
-
-/* Barra NIVEL 1 usando JS
-
-#topo ul ul {
-	position: absolute;
-	min-width: 100px;
-	display: none;
-	background: #b10333; 
-	margin: 0;
-	padding: 0;
+/*Formatando formulários
+*/
+label {
+	display: block;
+	cursor: pointer;
 }
 
-ul li ul li{
-	background: #b10333; 
-}
-.ul-noticias {
-	display: none;
-}
-
-#topo ul li:hover ul{
-	color: #69001d;
+input {
+	padding: 5px;
+	width: 125px;
+	font-size: 0.98em;
+	background-color: #fff;
 }
 
-body.pesquisa #navegacao a#pesquisa,
-body.extensao #navegacao a#extensao{
+input.submit {
+	width: 80px;
 	color: #fff;
-	background: #de003e;
-	cursor: text;
-}*/
-
+	background-color: #b10333;
+	border: 2px solid #870529;
+	padding: 5px;
+}
 
 /*Configura layout das três colunas*/
 
@@ -285,28 +264,6 @@ h2 {
 	color: #a1a1a1;
 }
 
-/*Formatando formulários
-*/
-label {
-	display: block;
-	cursor: pointer;
-}
-
-input {
-	padding: 5px;
-	width: 125px;
-	font-size: 0.9em;
-	background-color: #fff;
-}
-
-input.submit {
-	width: 80px;
-	color: #fff;
-	background-color: #b10333;
-	border: 2px solid #870529;
-	padding: 5px;
-}
-
 /*Formatando imagens
 */
 img {
@@ -317,6 +274,19 @@ img.imagem-principal {
 	width: 98%;
 	border: 3px solid #dfdfdf;
 }
+
+.fotos-galeria{
+	border: none;
+}
+
+.endereco {
+	width: 50%;
+	float: left; 
+	clear: both; 
+	margin-right:15px; 
+	border: 3px solid #dfdfdf;
+}
+
  img.detae {
  	width: 50%;
  	border: 4px solid #dfdfdf;
@@ -390,6 +360,7 @@ img.imagem-principal {
 	top: 0;
 	right: 7.5%;
 }
+
 /*Formatando cabeçalhos*/
 
 h3 {
@@ -440,12 +411,21 @@ h3 {
 	cursor: pointer;
 }
 
+/* Area Texto */
+.area-texto {
+	margin: 0px; 
+	width: 390px; 
+	height: 110px;
+}
+
 
 /*Rodape*/
 #container-rodape{
 	background: #294c71;
 	padding: 20px;
+	clear: both;
 }
+
 
 #rodape {
 	margin: 0 auto;
